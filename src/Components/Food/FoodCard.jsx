@@ -1,11 +1,10 @@
 import React from "react";
 import { GoStarFill } from "react-icons/go";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../Store/Slices/CartSlice";
 
 const FoodCard = ({ item }) => {
   const dispatch = useDispatch();
-
   return (
     <div className="font-bold w-[250px] bg-white p-5 flex flex-col rounded-lg gap-1">
       <img
