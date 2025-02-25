@@ -1,8 +1,12 @@
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <div className="flex items-center justify-center">
+      <div>
 
-export default Footer
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
