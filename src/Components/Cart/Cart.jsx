@@ -26,7 +26,7 @@ const Cart = () => {
         </div>
         <div>
           {cartItems.length === 0 ? (
-            <div className="text-gray-500 text-3xl text-center">No Item Added</div>
+            <div className="text-gray-500 text-2xl font-bold text-center mt-10">Your Cart is Empty</div>
           ) : (
             <div
               className={`md:h-[70vh] h-[65vh] ${

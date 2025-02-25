@@ -4,7 +4,8 @@ const StateSlice = createSlice({
   name: "active",
   initialState: {
     active: true,
-    tagsActive: 0,
+    tagsActive: "All",
+    navbarActive: "Home",
   },
   reducers: {
     setactive: (state) => {
@@ -12,6 +13,9 @@ const StateSlice = createSlice({
     },
     setTagsActive: (state, action) => {
       state.tagsActive = action.payload.index;
+    },
+    setnavbarActive: (state, action) => {
+      state.navbarActive = action.payload.menu;
     }
   },
 });

@@ -1,19 +1,28 @@
 import { Link } from "react-router-dom";
 import { menuHeader } from "../mockData/data";
-import {  useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { StateSliceAction } from "../Store/Slices/StateSlice";
+import FoodData from "../data/FoodData";
+import CartSearch from "./Cart/CartSearch";
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
+  const activeMenu = useSelector((state) => state.active.navbarActive);
   const dispatch = useDispatch();
-  const valueofSearch = useRef()
-  const [filter, setFilter] = useState("");
+  
+  const [searching, setSeaching] = useState("");
+  const [filteredItems, setFilteredItems] = useState([]);
   useEffect(() => {
-    const filt = valueofSearch.current.value;
-    console.log(filt)
-  })
+    if (searching !== "") {
+      const filter = FoodData.filter((item) =>
+        item.name.toUpperCase().includes(searching.toUpperCase())
+      );
+      setFilteredItems(filter);
+    } else {
+      setFilteredItems([]);
+    }
+  }, [searching]);
   return (
     <>
       <nav className="flex justify-between flex-col md:flex-row py-3 mx-5 md:mx-6 mb-10">
@@ -32,12 +41,18 @@ const Navbar = () => {
               {menuHeader.map((menus) => (
                 <li
                   className={`text-lg font-semibold text-gray-500 hover:text-red-400 px-2 ${
-                    active === menus.name
+                    activeMenu === menus.name
                       ? "text-white bg-green-400 rounded-xl hover:text-white"
                       : ""
                   }`}
                   key={menus.id}
-                  onClick={() => setActive(`${menus.name}`)}
+                  onClick={() =>
+                    {dispatch(
+                      StateSliceAction.setnavbarActive({ menu: menus.name })
+                    );
+                  }
+
+                  }
                 >
                   <a>{menus.name}</a>
                 </li>
@@ -52,7 +67,7 @@ const Navbar = () => {
             name="search"
             id="search"
             placeholder="Search your meals"
-            ref={valueofSearch}
+            onChange={(event) => setSeaching(event.target.value)}
           />
           <div className="hidden md:inline-block">
             <div
@@ -73,11 +88,17 @@ const Navbar = () => {
         </div>
       </div>
 
-    <div className="absolute z-40 h-[60vh] w-[21vw] bg-white right-20 top-17 rounded-xl">
-      <div>
-        yes
+      <div
+        className={` ${
+          filteredItems.length === 0 ? "hidden" : ""
+        } duration-300 absolute z-40 text-sm w-full md:w-[250px] lg:w-[350px] h-[90vh] md:h-[60vh] bg-white md:right-15  lg:right-20 top-30 md:top-20 rounded-xl overflow-y-scroll`}
+      >
+        <div>
+          {filteredItems.map((items) => {
+            return <CartSearch items={items} />;
+          })}
+        </div>
       </div>
-    </div>
     </>
   );
 };

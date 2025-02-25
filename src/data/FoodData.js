@@ -5,7 +5,7 @@ const FoodData = [
     name: "Onion Pizza",
     price: 150,
     desc: "A delicious pizza topped with fresh onions and cheese, offering a sharp, tangy flavor that complements the cheesy goodness.",
-    category: "Lunch",
+    category: ["All","Lunch"],
     rating: 4.5,
   },
   {
@@ -14,7 +14,7 @@ const FoodData = [
     name: "Margherita Pizza",
     price: 130,
     desc: "A classic Italian pizza with fresh tomatoes, mozzarella, and basil, delivering an authentic taste with a drizzle of olive oil.",
-    category: "Lunch",
+    category: ["All","Lunch"],
     rating: 4.2,
   },
   {
@@ -23,7 +23,7 @@ const FoodData = [
     name: "Pepperoni Pizza",
     price: 160,
     desc: "A crispy pizza loaded with spicy pepperoni, melted cheese, and tangy tomato sauce for a bold, satisfying bite.",
-    category: "Lunch",
+    category: ["All","Lunch"],
     rating: 4.6,
   },
   {
@@ -32,7 +32,7 @@ const FoodData = [
     name: "Mushroom and Spinach Pizza",
     price: 140,
     desc: "A flavorful pizza topped with fresh mushrooms and spinach, creating a balanced and earthy taste for vegetarians and pizza lovers.",
-    category: "Lunch",
+    category: ["All","Lunch"],
     rating: 4.2,
   },
   {
@@ -41,7 +41,7 @@ const FoodData = [
     name: "BBQ Chicken Pizza",
     price: 170,
     desc: "A smoky delight featuring BBQ-marinated chicken, melted cheese, and red onions, mixing sweet and savory flavors",
-    category: "Lunch",
+    category: ["All","Lunch"],
     rating: 4.8,
   },
   {
@@ -50,7 +50,7 @@ const FoodData = [
     name: "Classic Pancakes",
     price: 80,
     desc: "Fluffy pancakes served with butter and maple syrup, offering a comforting and delicious start to the day.",
-    category: "Breakfast",
+    category: ["All","Breakfast"],
     rating: 4.5,
   },
   {
@@ -59,7 +59,7 @@ const FoodData = [
     name: "Egg and Bacon Croissant",
     price: 110,
     desc: "Indulge in a buttery croissant filled with scrambled eggs, crispy bacon, and melted cheese. A savory and satisfying breakfast option that's perfect for on-the-go mornings.",
-    category: "Breakfast",
+    category: ["All","Breakfast"],
     rating: 4.2,
   },
   {
@@ -68,7 +68,7 @@ const FoodData = [
     name: "Greek Yogurt Parfait",
     price: 95,
     desc: "A refreshing Greek yogurt parfait with berries, honey, and granola, packed with nutrients and flavor.",
-    category: "Breakfast",
+    category: ["All","Breakfast"],
     rating: 4.1,
   },
   {
@@ -77,7 +77,7 @@ const FoodData = [
     name: "Avocado Toast",
     price: 120,
     desc: "Creamy mashed avocado on toasted whole grain bread, topped with sea salt and red pepper flakes for a nutritious breakfast.",
-    category: "Breakfast",
+    category: ["All","Breakfast"],
     rating: 4.6,
   },
   {
@@ -86,7 +86,7 @@ const FoodData = [
     name: "Fruit and Nut Oatmeal",
     price: 85,
     desc: "A hearty oatmeal bowl with mixed fruits, nuts, and honey, delivering energy and warmth in every bite.",
-    category: "Breakfast",
+    category: ["All","Breakfast"],
     rating: 4.5,
   },
   {
@@ -95,7 +95,7 @@ const FoodData = [
     name: "Grilled Salmon",
     price: 190,
     desc: "A perfectly grilled salmon fillet seasoned with herbs and served with roasted vegetables for a nutritious meal.",
-    category: "Dinner",
+    category: ["All","Dinner"],
     rating: 4.5,
   },
   {
@@ -104,7 +104,7 @@ const FoodData = [
     name: "Chicken Alfredo Pasta",
     price: 160,
     desc: "Creamy fettuccine Alfredo with tender grilled chicken, combining rich sauce, pasta, and protein for a comforting dish.",
-    category: "Dinner",
+    category: ["All","Dinner"],
     rating: 4.8,
   },
   {
@@ -113,7 +113,7 @@ const FoodData = [
     name: "Vegetable Stir-Fry",
     price: 130,
     desc: "A medley of stir-fried vegetables in a flavorful sauce, served over steamed rice for a light, nutritious dinner.",
-    category: "Dinner",
+    category: ["All","Dinner"],
     rating: 4.2,
   },
   {
@@ -122,7 +122,7 @@ const FoodData = [
     name: "Grilled Chicken Burrito Bowl",
     price: 160,
     desc: "A burrito bowl with grilled chicken, beans, rice, sautéed veggies, and cheese, packed with hearty flavors.",
-    category: "Dinner",
+    category: ["All","Dinner"],
     rating: 4.6,
   },
   {
@@ -131,7 +131,7 @@ const FoodData = [
     name: "Mushroom Risotto",
     price: 175,
     desc: "A creamy risotto made with Arborio rice, sautéed mushrooms, and Parmesan, offering a sophisticated, comforting taste.",
-    category: "Dinner",
+    category: ["All","Dinner"],
     rating: 4.5,
   },
   {
@@ -140,7 +140,7 @@ const FoodData = [
     name: "Cheese and Crackers Platter",
     price: 120,
     desc: "A selection of artisan cheeses, crispy crackers, and fresh fruits—a delightful snack for sharing or solo indulgence.",
-    category: "Snacks",
+    category: ["All","Snacks"],
     rating: 4.3,
   },
   {
@@ -149,7 +149,7 @@ const FoodData = [
     name: "Crispy Chicken Wings",
     price: 130,
     desc: "Crispy, seasoned chicken wings with a choice of BBQ or buffalo sauce, delivering bold flavors and a satisfying crunch.",
-    category: "Snacks",
+    category: ["All","Snacks"],
     rating: 4.4,
   },
   {
@@ -158,7 +158,7 @@ const FoodData = [
     name: "Paneer Tikka Skewers",
     price: 130,
     desc: "A fresh fruit smoothie blend with bananas, berries, and yogurt, offering a refreshing and nutritious drink.",
-    category: "Snacks",
+    category: ["All","Snacks"],
     rating: 4.9,
   },
   {
@@ -167,7 +167,7 @@ const FoodData = [
     name: "Hummus and Veggie Platter",
     price: 90,
     desc: "A classic cheeseburger with a juicy beef patty, melted cheese, lettuce, and tomatoes, delivering a satisfying bite.",
-    category: "Snacks",
+    category: ["All","Snacks"],
     rating: 4.4,
   },
   {
@@ -176,7 +176,7 @@ const FoodData = [
     name: "Fruit Skewers",
     price: 70,
     desc: "A rich chocolate brownie with a soft, fudgy center, perfect for a sweet and indulgent treat.",
-    category: "Snacks",
+    category: ["All","Snacks"],
     rating: 4.8,
   },
 ];
