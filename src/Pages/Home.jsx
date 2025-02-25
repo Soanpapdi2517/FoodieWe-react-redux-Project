@@ -10,7 +10,6 @@ const home = () => {
       <Category />
       <Fooditems />
       <Cart />
-      
     </>
   );
 };
