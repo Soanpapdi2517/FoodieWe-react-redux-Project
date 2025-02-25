@@ -7,6 +7,7 @@ const FoodData = [
     desc: "A delicious pizza topped with fresh onions and cheese, offering a sharp, tangy flavor that complements the cheesy goodness.",
     category: ["All","Lunch"],
     rating: 4.5,
+    quantity: 0,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const FoodData = [
     desc: "A classic Italian pizza with fresh tomatoes, mozzarella, and basil, delivering an authentic taste with a drizzle of olive oil.",
     category: ["All","Lunch"],
     rating: 4.2,
+    quantity: 0,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const FoodData = [
     desc: "A crispy pizza loaded with spicy pepperoni, melted cheese, and tangy tomato sauce for a bold, satisfying bite.",
     category: ["All","Lunch"],
     rating: 4.6,
+    quantity: 0,
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const FoodData = [
     desc: "A flavorful pizza topped with fresh mushrooms and spinach, creating a balanced and earthy taste for vegetarians and pizza lovers.",
     category: ["All","Lunch"],
     rating: 4.2,
+    quantity: 0,
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const FoodData = [
     desc: "A smoky delight featuring BBQ-marinated chicken, melted cheese, and red onions, mixing sweet and savory flavors",
     category: ["All","Lunch"],
     rating: 4.8,
+    quantity: 0,
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ const FoodData = [
     desc: "Fluffy pancakes served with butter and maple syrup, offering a comforting and delicious start to the day.",
     category: ["All","Breakfast"],
     rating: 4.5,
+    quantity: 0,
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ const FoodData = [
     desc: "Indulge in a buttery croissant filled with scrambled eggs, crispy bacon, and melted cheese. A savory and satisfying breakfast option that's perfect for on-the-go mornings.",
     category: ["All","Breakfast"],
     rating: 4.2,
+    quantity: 0,
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ const FoodData = [
     desc: "A refreshing Greek yogurt parfait with berries, honey, and granola, packed with nutrients and flavor.",
     category: ["All","Breakfast"],
     rating: 4.1,
+    quantity: 0,
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ const FoodData = [
     desc: "Creamy mashed avocado on toasted whole grain bread, topped with sea salt and red pepper flakes for a nutritious breakfast.",
     category: ["All","Breakfast"],
     rating: 4.6,
+    quantity: 0,
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ const FoodData = [
     desc: "A hearty oatmeal bowl with mixed fruits, nuts, and honey, delivering energy and warmth in every bite.",
     category: ["All","Breakfast"],
     rating: 4.5,
+    quantity: 0,
   },
   {
     id: 11,
@@ -97,6 +107,7 @@ const FoodData = [
     desc: "A perfectly grilled salmon fillet seasoned with herbs and served with roasted vegetables for a nutritious meal.",
     category: ["All","Dinner"],
     rating: 4.5,
+    quantity: 0,
   },
   {
     id: 12,
@@ -106,6 +117,7 @@ const FoodData = [
     desc: "Creamy fettuccine Alfredo with tender grilled chicken, combining rich sauce, pasta, and protein for a comforting dish.",
     category: ["All","Dinner"],
     rating: 4.8,
+    quantity: 0,
   },
   {
     id: 13,
@@ -115,6 +127,7 @@ const FoodData = [
     desc: "A medley of stir-fried vegetables in a flavorful sauce, served over steamed rice for a light, nutritious dinner.",
     category: ["All","Dinner"],
     rating: 4.2,
+    quantity: 0,
   },
   {
     id: 14,
@@ -124,6 +137,7 @@ const FoodData = [
     desc: "A burrito bowl with grilled chicken, beans, rice, sautéed veggies, and cheese, packed with hearty flavors.",
     category: ["All","Dinner"],
     rating: 4.6,
+    quantity: 0,
   },
   {
     id: 15,
@@ -133,6 +147,7 @@ const FoodData = [
     desc: "A creamy risotto made with Arborio rice, sautéed mushrooms, and Parmesan, offering a sophisticated, comforting taste.",
     category: ["All","Dinner"],
     rating: 4.5,
+    quantity: 0,
   },
   {
     id: 16,
@@ -142,6 +157,7 @@ const FoodData = [
     desc: "A selection of artisan cheeses, crispy crackers, and fresh fruits—a delightful snack for sharing or solo indulgence.",
     category: ["All","Snacks"],
     rating: 4.3,
+    quantity: 0,
   },
   {
     id: 17,
@@ -151,6 +167,7 @@ const FoodData = [
     desc: "Crispy, seasoned chicken wings with a choice of BBQ or buffalo sauce, delivering bold flavors and a satisfying crunch.",
     category: ["All","Snacks"],
     rating: 4.4,
+    quantity: 0,
   },
   {
     id: 18,
@@ -160,6 +177,7 @@ const FoodData = [
     desc: "A fresh fruit smoothie blend with bananas, berries, and yogurt, offering a refreshing and nutritious drink.",
     category: ["All","Snacks"],
     rating: 4.9,
+    quantity: 0,
   },
   {
     id: 19,
@@ -169,6 +187,7 @@ const FoodData = [
     desc: "A classic cheeseburger with a juicy beef patty, melted cheese, lettuce, and tomatoes, delivering a satisfying bite.",
     category: ["All","Snacks"],
     rating: 4.4,
+    quantity: 0,
   },
   {
     id: 20,
@@ -178,6 +197,8 @@ const FoodData = [
     desc: "A rich chocolate brownie with a soft, fudgy center, perfect for a sweet and indulgent treat.",
     category: ["All","Snacks"],
     rating: 4.8,
+    quantity: 0,
+
   },
 ];
 export default FoodData;

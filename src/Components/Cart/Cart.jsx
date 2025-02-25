@@ -2,12 +2,13 @@ import { IoMdClose } from "react-icons/io";
 import CartItem from "./CartItem";
 import { useDispatch, useSelector } from "react-redux";
 import { StateSliceAction } from "../../Store/Slices/StateSlice";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const activeCheck = useSelector((state) => state.active.active);
   const cartItems = useSelector((state) => state.Cart.cart);
-
+  const totalAmount = cartItems.reduce((acc, item)=> acc + (item.price * item.quantity), 0);
   return (
     <>
       <div
@@ -40,11 +41,11 @@ const Cart = () => {
           )}
         </div>
         <div className="absolute bottom-0">
-          <h1 className="text-gray-700 font-semibold">Items: </h1>
-          <h1 className="text-gray-700 font-semibold">Amount: </h1>
+          <h1 className="text-gray-700 font-semibold">Items: {cartItems.length}</h1>
+          <h1 className="text-gray-700 font-semibold">Amount: ₹{totalAmount.toFixed(2)}</h1>
           <hr className="w-[90vw] md:w-[18vw] my-2 text-gray-400" />
           <button className="bg-green-500 text-white py-2 px-3 w-[90vw] md:w-[18vw] font-bold rounded-lg mb-5">
-            Checkout
+           <Link to={"/success"}>Checkout</Link> 
           </button>
         </div>
       </div>

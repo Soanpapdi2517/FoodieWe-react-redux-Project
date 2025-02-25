@@ -43,7 +43,7 @@ const Navbar = () => {
                   className={`text-lg font-semibold text-gray-500 hover:text-red-400 px-2 ${
                     activeMenu === menus.name
                       ? "text-white bg-green-400 rounded-xl hover:text-white"
-                      : ""
+                      : ""}
                   }`}
                   key={menus.id}
                   onClick={() =>
