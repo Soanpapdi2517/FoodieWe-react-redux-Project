@@ -10,7 +10,7 @@ import CartSearch from "./Cart/CartSearch";
 const Navbar = () => {
   const activeMenu = useSelector((state) => state.active.navbarActive);
   const dispatch = useDispatch();
-  
+  const cartItems = useSelector((state) => state.Cart.cart);
   const [searching, setSeaching] = useState("");
   const [filteredItems, setFilteredItems] = useState([]);
   useEffect(() => {
@@ -74,7 +74,7 @@ const Navbar = () => {
               onClick={() => dispatch(StateSliceAction.setactive())}
               className="bg-gray-300 flex items-center justify-center rounded-full p-2 font-bold hover:text-white hover:bg-green-400 active:text-white active:bg-green-500 "
             >
-              <FaShoppingCart className="text-4xl p-2" />
+              <FaShoppingCart className={`text-4xl p-2 ${cartItems.length > 0 && "animate-bounce delay-500 transition-all"} `} />
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
           onClick={() => dispatch(StateSliceAction.setactive())}
           className="bg-gray-300 flex items-center justify-center rounded-full p-2 font-bold hover:text-white hover:bg-green-400 active:text-white active:bg-green-500 fixed z-40 bottom-10 right-5"
         >
-          <FaShoppingCart className="text-4xl p-2" />
+          <FaShoppingCart className={`text-4xl p-2 ${cartItems.length > 0 && "animate-bounce delay-300 transition-all"} `} />
         </div>
       </div>
 

@@ -9,8 +9,10 @@ const Cart = () => {
   const activeCheck = useSelector((state) => state.active.active);
   const cartItems = useSelector((state) => state.Cart.cart);
   const totalAmount = cartItems.reduce((acc, item)=> acc + (item.price * item.quantity), 0);
+  const totalQuantity = cartItems.reduce((totalqty, item) => totalqty + item.quantity, 0)
   return (
     <>
+
       <div
         className={` fixed right-0 top-0 bg-white w-full md:w-[20vw] h-full p-5 ${
           activeCheck ? "translate-x-full" : "translate-x-0"
@@ -22,7 +24,7 @@ const Cart = () => {
             onClick={() => {
               dispatch(StateSliceAction.setactive());
             }}
-            className="text-bold text-xl border-2 p-1 rounded-md text-gray-600 border-gray-600 hover:text-red-300 hover:border-red-300"
+            className="active:bg-red-600 active:scale-120 active:text-white text-bold text-xl border-2 p-1 rounded-md text-gray-600 border-gray-600 hover:text-red-300 hover:border-red-300"
           />
         </div>
         <div>
@@ -41,10 +43,10 @@ const Cart = () => {
           )}
         </div>
         <div className="absolute bottom-0">
-          <h1 className="text-gray-700 font-semibold">Items: {cartItems.length}</h1>
+          <h1 className="text-gray-700 font-semibold">Items: {totalQuantity}</h1>
           <h1 className="text-gray-700 font-semibold">Amount: ₹{totalAmount.toFixed(2)}</h1>
           <hr className="w-[90vw] md:w-[18vw] my-2 text-gray-400" />
-          <button className="bg-green-500 text-white py-2 px-3 w-[90vw] md:w-[18vw] font-bold rounded-lg mb-5">
+          <button className="bg-green-500 active:bg-green-600 active:scale-110 text-white py-2 px-3 w-[90vw] md:w-[18vw] font-bold rounded-lg mb-5">
            <Link to={"/success"}>Checkout</Link> 
           </button>
         </div>
