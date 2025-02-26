@@ -23,12 +23,17 @@ const Navbar = () => {
       setFilteredItems([]);
     }
   }, [searching]);
+  const [currTime, setCurrTime] = useState(new Date().toLocaleTimeString());
+  useEffect(() => {
+    setInterval(() => setCurrTime(new Date().toLocaleTimeString()), 1000);
+  }, [currTime]);
+
   return (
     <>
       <nav className="flex justify-between flex-col md:flex-row py-3 mx-5 md:mx-6 mb-10">
         <div>
           <h3 className="text-xl font-bold text-gray-600">
-            {new Date().toDateString()}
+            {new Date().toDateString()}, {currTime}
           </h3>
           <Link to={"/"} className="text-2xl font-bold">
             <span>Foodie </span>us
@@ -43,16 +48,15 @@ const Navbar = () => {
                   className={`text-lg font-semibold text-gray-500 hover:text-red-400 px-2 ${
                     activeMenu === menus.name
                       ? "text-white bg-green-400 rounded-xl hover:text-white"
-                      : ""}
+                      : ""
+                  }
                   }`}
                   key={menus.id}
-                  onClick={() =>
-                    {dispatch(
+                  onClick={() => {
+                    dispatch(
                       StateSliceAction.setnavbarActive({ menu: menus.name })
                     );
-                  }
-
-                  }
+                  }}
                 >
                   <a>{menus.name}</a>
                 </li>
@@ -74,7 +78,12 @@ const Navbar = () => {
               onClick={() => dispatch(StateSliceAction.setactive())}
               className="bg-gray-300 flex items-center justify-center rounded-full p-2 font-bold hover:text-white hover:bg-green-400 active:text-white active:bg-green-500 "
             >
-              <FaShoppingCart className={`text-4xl p-2 ${cartItems.length > 0 && "animate-bounce delay-500 transition-all"} `} />
+              <FaShoppingCart
+                className={`text-4xl p-2 ${
+                  cartItems.length > 0 &&
+                  "animate-bounce delay-500 transition-all"
+                } `}
+              />
             </div>
           </div>
         </div>
@@ -84,7 +93,11 @@ const Navbar = () => {
           onClick={() => dispatch(StateSliceAction.setactive())}
           className="bg-gray-300 flex items-center justify-center rounded-full p-2 font-bold hover:text-white hover:bg-green-400 active:text-white active:bg-green-500 fixed z-40 bottom-10 right-5"
         >
-          <FaShoppingCart className={`text-4xl p-2 ${cartItems.length > 0 && "animate-bounce delay-300 transition-all"} `} />
+          <FaShoppingCart
+            className={`text-4xl p-2 ${
+              cartItems.length > 0 && "animate-bounce delay-300 transition-all"
+            } `}
+          />
         </div>
       </div>
 
