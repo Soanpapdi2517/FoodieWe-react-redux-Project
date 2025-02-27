@@ -12,7 +12,7 @@ const Category = () => {
         <h3 className="text-xl font-bold mt-8">Find the Best Food</h3>
       </div>
       <div>
-        <ul className="flex items-center justify-start gap-4 my-5 overflow-x-scroll md:overflow-x-hidden scroll-smooth">
+        <ul className="flex items-center justify-start gap-4 my-5 overflow-x-scroll md:overflow-x-hidden scroll-smooth scrollbar-none">
           {FoodTags.map((tag, index) => (
             <li
               key={index}

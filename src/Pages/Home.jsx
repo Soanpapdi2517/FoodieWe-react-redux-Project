@@ -2,7 +2,7 @@ import Cart from "../Components/Cart/Cart";
 import Category from "../Components/Category";
 import Fooditems from "../Components/Food/Fooditems";
 import Footer from "../Components/Footer";
-import Navbar from "../Components/navbar";
+import Navbar from "../Components/Navbar";
 
 const home = () => {
   return (

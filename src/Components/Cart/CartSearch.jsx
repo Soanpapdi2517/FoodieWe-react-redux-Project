@@ -8,7 +8,7 @@ const CartSearch = ({ items }) => {
     <div className="flex gap-2 shadow-md rounded-lg p-2 mb-4 items-center ml-4">
       <img src={items.img} className="w-[60px] h-[40px] aspect-square" alt="" />
       <div className="leading-5 grid grid-cols-3">
-        <div className="flex flex-col items-center items-start col-span-2">
+        <div className="flex flex-col items-center col-span-2">
           <h1 className="font-bold text-gray-700">{items.name}</h1>
           <span className="text-green-500">₹{items.price}</span>
         </div>
